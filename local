@@ -1,0 +1,389 @@
+<div class="col-1-4">
+              <h3 class="footer-title"><?php echo $footer_title_3; ?></h3>
+              <ul class="visa-requirement">
+                <li><?php echo $visa_requirement_1; ?></li>
+                <li><?php echo $visa_requirement_2; ?></li>
+                <li><?php echo $visa_requirement_3; ?></li>
+                <li><?php echo $visa_requirement_4; ?></li>
+              </ul>
+            </div>
+            <div class="col-1-4">
+              <ul class="visa-requirement">
+                <li><?php echo $visa_requirement_5; ?></li>
+                <li><?php echo $visa_requirement_6; ?></li>
+                <li><?php echo $visa_requirement_7; ?></li>
+                <li><?php echo $visa_requirement_8; ?></li>
+              </ul>
+            </div>
+
+            <div class="col-1-4">
+              <h3 class="footer-title"><?php echo $footer_title_1;?></h3>
+              <ul class="path-menu">
+                <li><a target="<?php echo $path_menu_1["target"]; ?>" href="<?php echo $path_menu_1["url"]; ?>"><?php echo $path_menu_1["title"]; ?></a></li>
+                <li><a target="<?php echo $path_menu_2["target"]; ?>" href="<?php echo $path_menu_2["url"]; ?>"><?php echo $path_menu_2["title"]; ?></a></li>
+                <li><a target="<?php echo $path_menu_3["target"]; ?>" href="<?php echo $path_menu_3["url"]; ?>"><?php echo $path_menu_3["title"]; ?></a></li>
+              </ul>
+            </div>
+            <div class="col-1-4">
+            <h3 class="footer-title"><?php echo $footer_title_2; ?></h3>
+              <?php
+                if(has_nav_menu("footer-navigation")){
+                  wp_nav_menu([
+                    "theme_location"  =>  "footer-navigation",
+                    "container"       =>  "nav",
+                    "container_class" =>  "secoundary-menu"
+                  ]);
+                }
+              ?>
+            </div>
+
+
+
+            <div class="container">
+    <div class="width-handle">
+      <div class="cta-box">
+        <div class="cta-content"> 
+          <span class="cta-span"><?php echo $cta_span;?></span>
+          <h3 class="cta-title">
+            <?php echo $cta_title;?>
+          </h3> <!-- .cta-title -->
+        </div> <!-- .cta-content -->
+        <div class="btn-bg-solid">
+          <a target="<?php echo $cta_button["target"]; ?>" href="<?php echo $cta_button["url"]; ?>" class="cta-btn">
+            <div class="d-flex items-center">
+              <?php echo $cta_button["title"]; ?> <img src="<?php echo get_template_directory_uri() . "/img/large-right-arrow.svg"?>" alt="Arrow Img">
+            </div>
+          </a> <!-- .cta-btn -->
+        </div> <!-- .btn-bg-solid -->
+      </div> <!-- .cta-box -->
+    </div>
+  </div>
+
+<!-- About Section -->
+<section class="about">
+  <div class="about-content">
+    <span class="about-span">About Us</span>
+    <h3 class="about-title">
+      A passionate team you can rely on
+    </h3>
+    <p class="about-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, tellus vitae aliquam eleifend, sapien eros luctus lorem, ut ullamcorper leo leo a felis. Praesent consequat nec purus eget consequat. 
+    </p>
+    <a href="#" class="about-us-btn">
+      About Us <img src="<?php echo get_template_directory_uri() . "/img/arrow-pointing-to-right.svg"?>" alt="">
+    </a>
+  </div>
+</section>
+
+
+
+
+
+.home .cta-box{
+  width: 36%;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -950px;
+  margin-bottom: 950px;
+  background-color: #212121;
+  position: relative;
+}
+.home .cta-box::after{
+  content: "";
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-top: 15px solid rgba(0, 255, 255, 0.7);
+  border-right: 15px solid rgba(0, 255, 255, 0.7);
+}
+.home .cta-box .cta-content{
+  color: #ffffff;
+  padding: 30px 30px 40px 30px;
+}
+.home .cta-box .cta-content .cta-span{
+  position: relative;
+  display: block;
+  padding-bottom: 15px;
+  z-index: 9999;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border-bottom: 1px solid #1CB6BC;
+}
+.home .cta-box .cta-content .cta-title{
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 9999;
+  position: relative;
+}
+.home .cta-box .btn-bg-solid{
+  padding: 10px 30px;
+  width: 100%;
+  z-index: 9999;
+  position: relative;
+  background-color: #1CB6BC;
+}
+.home .cta-box .cta-btn{
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.home .cta-box .cta-btn::after{
+  position: absolute;
+  width: 100px;
+  top: 10px;
+  left: 120px;
+  right: auto;
+  height: 30px;
+  content: "";
+  border-right: 4px solid #ffffff;
+}
+.home .cta-box .cta-btn img{
+  width: 120px;
+  height: 50px;
+  padding-left: 60px;
+  object-fit: contain;
+}
+
+/* About Section */
+.about{
+  width: 60%;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 100px;
+  margin-top: -1100px;
+  background-color: #E4E4E4;
+}
+.about .about-us-btn{
+  display: flex;
+  align-items: center;
+}
+
+
+<div class="about-us-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/About-us-section.png" alt="">
+      </div> <!-- .about-us-img -->
+      <div class="about-content">
+        <span class="about-span">About Us</span>
+        <h3 class="about-title">
+          A passionate team you can rely on
+        </h3> <!-- .about-title --> 
+        <p class="about-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, tellus vitae aliquam eleifend, sapien eros luctus lorem, ut ullamcorper leo leo a felis. Praesent consequat nec purus eget consequat. 
+        </p> <!-- .about-text -->
+        <a href="#" class="about-us-btn">
+          About Us <img src="<?php echo get_template_directory_uri() . "/img/arrow-pointing-to-right.svg"?>" alt="">
+        </a> <!-- .about-us-btn -->
+      </div> <!-- .about-content -->
+
+
+      <div class="cta-box">
+      <div class="cta-content"> 
+        <span class="cta-span"><?php echo $cta_span;?></span>
+        <h3 class="cta-title">
+          <?php echo $cta_title;?>
+        </h3> <!-- .cta-title -->
+      </div> <!-- .cta-content -->
+        <div class="btn-bg-solid">
+          <a target="<?php echo $cta_button["target"]; ?>" href="<?php echo $cta_button["url"]; ?>" class="cta-btn">
+            <?php echo $cta_button["title"]; ?> <img src="<?php echo get_template_directory_uri() . "/img/large-right-arrow.svg"?>" alt="Arrow Img">
+          </a> <!-- .cta-btn -->
+        </div> <!-- .btn-bg-solid -->
+      </div> <!-- .cta-box -->
+
+
+      .home .hero-bg .cta-box{
+  width: 36%;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 600px;
+  z-index: 9999 !important;
+  background-color: #212121;
+  position: relative;
+}
+.home .hero-bg .cta-box::after{
+  content: "";
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-top: 15px solid rgba(0, 255, 255, 0.7);
+  border-right: 15px solid rgba(0, 255, 255, 0.7);
+}
+.home .hero-bg .cta-box .cta-content{
+  color: #ffffff;
+  padding: 30px 30px 40px 30px;
+}
+.home .hero-bg .cta-box .cta-content .cta-span{
+  position: relative;
+  display: block;
+  padding-bottom: 15px;
+  z-index: 9999;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border-bottom: 1px solid #1CB6BC;
+}
+.home .hero-bg .cta-box .cta-content .cta-title{
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 9999;
+  position: relative;
+}
+.home .hero-bg .cta-box .btn-bg-solid{
+  padding: 10px 30px;
+  width: 100%;
+  z-index: 9999;
+  position: relative;
+  background-color: #1CB6BC;
+}
+.home .hero-bg .cta-box .cta-btn{
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.home .hero-bg .cta-box .cta-btn::after{
+  position: absolute;
+  width: 100px;
+  top: 10px;
+  left: 120px;
+  right: auto;
+  height: 30px;
+  content: "";
+  border-right: 4px solid #ffffff;
+}
+.home .hero-bg .cta-box .cta-btn img{
+  width: 120px;
+  height: 50px;
+  padding-left: 60px;
+  object-fit: contain;
+}
+
+
+<div class="about-section">
+    <div class="container">
+      <div class="d-flex items-center">
+        <div class="about-us-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/About-us-section.png" alt="">
+        </div> <!-- .about-us-img -->
+        <div class="about-content">
+          <span class="about-span">About Us</span>
+          <h3 class="about-title">
+            A passionate team you can rely on
+          </h3> <!-- .about-title --> 
+          <p class="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, tellus vitae aliquam eleifend, sapien eros luctus lorem, ut ullamcorper leo leo a felis. Praesent consequat nec purus eget consequat. 
+          </p> <!-- .about-text -->
+          <a href="#" class="about-us-btn">
+            About Us <img src="<?php echo get_template_directory_uri() . "/img/arrow-pointing-to-right.svg"?>" alt="">
+          </a> <!-- .about-us-btn -->
+        </div> <!-- .about-content -->
+      </div>
+    </div>
+  </div> <!-- .about-section -->
+
+  .about{
+  
+  /*position: relative;*/
+}
+.about .about-section{
+  width: 60%;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 100px;
+  /*margin-top: -765px;*/
+  background-color: #E4E4E4;
+}
+.about .about-us-img{
+  width: 40%;
+  /*margin-right: auto;*/
+  /*margin-left: 0;*/
+}
+.about .about-us-img img{
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+.about .about-content{
+  
+}
+.about .about-content .about-span{
+  color: #212121;
+  position: relative;
+  padding-top: 25px;
+  padding-left: 50px;
+}
+.about .about-content .about-span::before{
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-top: 12px solid #212121;
+  border-left: 12px solid #212121;
+}
+.about .about-content .about-title{
+  color: #1CB6BC;
+  font-size: 48px;
+  line-height: 60px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.about .about-content .about-text{
+  color: #212121;
+}
+.about .about-us-btn{
+  display: flex;
+  align-items: center;
+}
+
+
+<!-- Visa Posts Section -->
+<?php
+  if(have_posts()){
+    while(have_posts()){
+      the_post();
+?>
+<section class="visa-posts">
+  <div class="visa-posts-white-space">
+    <div class="container">
+      <div class="width-handle">
+        <div class="visa-post">
+          <?php echo get_the_post_thumbnail_url();?>
+          <div class="visa-post-content">
+            <h3 class="visa-post-title"><?php the_title();?></h3>
+            <p class="visa-post-text">
+              <?php the_content();?>
+            </p> <!-- .visa-post-text -->
+            <a class="read-more-btn" href="<?php the_permalink();?>">
+              <div class="d-flex items-center">
+                Read More <img src="<?php echo get_template_directory_uri() . "/img/arrow-pointing-to-right.svg"?>" alt="Arrow Img">
+              </div>
+              </a>
+          </div> <!-- .visa-post-content -->
+        </div> <!-- .visa-post -->
+      </div> <!-- .width-handle -->
+    </div>
+  </div> <!-- .visa-posts-white-space -->
+</section> <!-- .visa-posts -->
+<?php
+    }
+  }
+?>
